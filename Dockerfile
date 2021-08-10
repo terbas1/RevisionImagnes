@@ -7,4 +7,5 @@ WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 --no-cache-dir install Pillow
 RUN pip3 install -r requirements.txt
+RUN sudo apt-get install libglib2.0-0
 CMD ["python3","reviewImg.py"]
