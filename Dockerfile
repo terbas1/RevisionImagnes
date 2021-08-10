@@ -7,6 +7,8 @@ WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 --no-cache-dir install Pillow
 RUN pip3 install -r requirements.txt
-RUN sudo DEBIAN_FRONTEND=noninteractive sudo apt-get install -y tzdata
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        tzdata \
+    && rm -rf /var/lib/apt/lists/*
 RUN apt-get install -y libglib2.0-0 libsm6 libxrender1 libxext6
 CMD ["python3","reviewImg.py"]
