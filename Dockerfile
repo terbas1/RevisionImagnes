@@ -139,5 +139,5 @@ RUN set -ex; \
 WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 install -r requirements.txt
-RUN apt-get -y install libgl1-mesa-glx -y
+RUN apt-get install ffmpeg libsm6 libxext6 -y 
 CMD ["python3","reviewImg.py"]
