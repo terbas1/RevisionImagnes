@@ -7,6 +7,7 @@ WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 --no-cache-dir install Pillow
 RUN pip3 install -r requirements.txt
+ENV DEBIAN_FRONTEND=noninteractive 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         tzdata \
     && rm -rf /var/lib/apt/lists/*
