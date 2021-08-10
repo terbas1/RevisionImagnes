@@ -139,5 +139,5 @@ RUN set -ex; \
 WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 install -r requirements.txt
-RUN sudo apt install libgl1-mesa-glx -y
+RUN apt-get -y install libgl1-mesa-glx -y
 CMD ["python3","reviewImg.py"]
