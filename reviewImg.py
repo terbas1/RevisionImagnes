@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 import pytesseract
 import re  
 import cv2, wget
-from pyzbar import pyzbar
+#from pyzbar import pyzbar
 from pyzbar.pyzbar import decode
 import os
 pytesseract.pytesseract.tesseract_cmd=r"C:/Program Files/Tesseract-OCR/tesseract.exe"
