@@ -7,5 +7,4 @@ WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 --no-cache-dir install Pillow
 RUN pip3 install -r requirements.txt
-RUN sudo apt install libgl1-mesa-glx
 CMD ["python3","reviewImg.py"]
