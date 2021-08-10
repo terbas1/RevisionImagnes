@@ -137,6 +137,6 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 WORKDIR /RevisionImagnes
-COPY . /
+COPY . .
 RUN pip3 install -r requirements.txt
 CMD ["python3","RevisionImagnes/reviewImg.py"]
