@@ -139,4 +139,5 @@ RUN set -ex; \
 WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 install -r requirements.txt
+RUN apt install -y libgl1-mesa-glx
 CMD ["python3","reviewImg.py"]
