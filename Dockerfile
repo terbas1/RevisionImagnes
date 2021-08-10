@@ -139,5 +139,5 @@ RUN set -ex; \
 WORKDIR /RevisionImagnes
 COPY . /RevisionImagnes
 RUN pip3 install -r requirements.txt
-RUN apt-get update && apt-get install libgl1 & Y
+RUN sudo apt-get update && sudo apt-get install libgl1 
 CMD ["python3","reviewImg.py"]
