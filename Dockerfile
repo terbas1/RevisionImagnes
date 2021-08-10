@@ -1,4 +1,4 @@
-FROM python3.8-alpine3.13
+FROM alpine:3.14
 RUN apk add --no-cache python4-dev \
     && pip3 install --upgrade pip
 WORKDIR /RevisionImagnes
