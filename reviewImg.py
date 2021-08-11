@@ -5,7 +5,7 @@ import cv2, wget
 #from pyzbar import pyzbar
 from pyzbar.pyzbar import decode
 import os
-pytesseract.pytesseract.tesseract_cmd=r"C:/Program Files/Tesseract-OCR/tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd=r"C:/Program Files/Tesseract-OCR/tesseract.exe"
 app= Flask(__name__)
 
 @app.route('/verificarIMG/<string:img>', methods=['GET'])
