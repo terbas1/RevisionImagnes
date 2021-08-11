@@ -11,5 +11,7 @@ RUN apt-get update && \
     apt-get install -y zbar-tools
 RUN pip3 install -r requirements.txt
 ENV DEBIAN_FRONTEND=noninteractive 
+RUN sudo apt install tesseract-ocr
+RUN sudo apt-get install tesseract-ocr-spa
 RUN apt-get install -y libglib2.0-0 libsm6 libxrender1
 CMD ["python3","reviewImg.py"]
