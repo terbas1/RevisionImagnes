@@ -5,6 +5,7 @@ import cv2, wget
 #from pyzbar import pyzbar
 from pyzbar.pyzbar import decode
 import os
+import shlex, subprocess
 #pytesseract.pytesseract.tesseract_cmd=r"C:/Program Files/Tesseract-OCR/tesseract.exe"
 app= Flask(__name__)
 
@@ -55,6 +56,16 @@ def verificarIMG(img):
     if len(image2) == 0:
         image2.append('https://i.ibb.co/dJXc0p1/Env-os-internacionales-sin-foto-04.jpg')
     image2.append('https://i.ibb.co/grV72wS/infoo-01.jpg')
+    
+    comandOne="sudo rm *.jpg"
+    comandTwo="sudo rm *.tmp"
+    comandTree="sudo rm *.png"
+    argsOne = shlex.split(comandOne)
+    argsTwo = shlex.split(comandTwo)
+    argsTree = shlex.split(comandTree)
+    subprocess.call(argsOne)
+    subprocess.call(argsTwo)
+    subprocess.call(argsTree)
 
     return jsonify(image2)
 
